@@ -54,11 +54,11 @@ public class Parser {
 		}else throw new UnknownGenreException(this.objectGenre);
 	}
 	
-	public static void main(String[] args) {
-		/*Scanner sc= new Scanner(System.in); //System.in is a standard input stream  
+	/*public static void main(String[] args) {
+		Scanner sc= new Scanner(System.in); //System.in is a standard input stream  
 		System.out.print("Enter a string: ");  
 		String str= sc.nextLine();    
-		System.out.println("Reached here.");*/
+		System.out.println("Reached here.");
 		
 		String str = Server.startServerAndGetString(); 
 		Parser parser = new Parser(str);
@@ -69,5 +69,5 @@ public class Parser {
 			parser.creteObject();
 		}catch(UnknownGenreException unknownGenreException) {unknownGenreException.printStackTrace();}
 		
-	}
+	}*/
 }

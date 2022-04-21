@@ -1,6 +1,6 @@
 package backend.generalClasses;
 
-public class Human {
+public abstract class Human {
 	private String name;
 	private Address address;
 	private int age;
@@ -30,6 +30,8 @@ public class Human {
 	public void talk() {
 		System.out.println("I am a human~");
 	}
+	
+	public abstract void printInfo();
 	
 	@Override
 	public String toString() {
