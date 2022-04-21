@@ -34,7 +34,7 @@ public class Server {
         while(!line.equals("Over")){
             System.out.println("Client:"+line);
             try {
-                totalString+=line+"\n";
+                totalString+=line;
                 line = this.dataInputStream.readUTF();
             } catch (IOException e) {
                 throw new RuntimeException(e);

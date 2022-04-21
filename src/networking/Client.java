@@ -25,7 +25,7 @@ public class Client {
 
             this.dataInputStream = new DataInputStream(new BufferedInputStream(this.socket.getInputStream()));
             this.dataOutputStream = new DataOutputStream(this.socket.getOutputStream());
-            this.fileInputStream = new FileInputStream(this.filename);
+            this.fileInputStream = getClass().getResourceAsStream("/networking/input.txt");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
