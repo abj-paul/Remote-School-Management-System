@@ -23,11 +23,20 @@ public class MultipleParser {
 	}
 	
 	public void parse() {
-		String[] lineList;
-		lineList = rawData.split("|");
+		String[] lineList = rawData.split("\\|");
+		
+		// Debug
+		//for(int i=0; i<lineList.length; i++) System.out.printf("%d)%s\n",i+1,lineList[i]);
+		
 		for(int i=0; i<lineList.length; i++) {
-			String[] tokenStrings = lineList[i].split(",");
+			String[] tokenStrings = lineList[i].split("\\,");
+			
+			// Debug
+			//for(int i0=0; i0<tokenStrings.length; i0++) System.out.printf("%d)%s\n",i0+1,tokenStrings[i0]);
+			
 			this.allObjectGenre.add(tokenStrings[0]);
+			ArrayList<String>parameterList = new ArrayList<String>();
+			this.allParameterList.add(parameterList);
 			for(int t=1; t<tokenStrings.length; t++) this.allParameterList.get(i).add(tokenStrings[t]);
 		}
 		
