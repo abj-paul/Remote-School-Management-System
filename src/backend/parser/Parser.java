@@ -1,6 +1,7 @@
 package backend.parser;
 
 import java.util.ArrayList;
+import networking.Server;
 import java.util.Scanner;
 
 import backend.exceptions.UnknownGenreException;
@@ -54,10 +55,12 @@ public class Parser {
 	}
 	
 	public static void main(String[] args) {
-		Scanner sc= new Scanner(System.in); //System.in is a standard input stream  
+		/*Scanner sc= new Scanner(System.in); //System.in is a standard input stream  
 		System.out.print("Enter a string: ");  
 		String str= sc.nextLine();    
-		System.out.println("Reached here.");
+		System.out.println("Reached here.");*/
+		
+		String str = Server.startServerAndGetString(); 
 		Parser parser = new Parser(str);
 		parser.parse();
 		//parser.printForDebug();
