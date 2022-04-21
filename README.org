@@ -1,0 +1,10 @@
+* About
+  Its a small project for 3rd Semester Course, Object Oriented Design, in IIT,DU.
+  Mark = 10
+  Focus = Implementing Object Oriented Design
+* Execute Program
+  #+begin_src bash
+    ./run.sh
+     cd bin/
+     java networking.Client
+  #+end_src
