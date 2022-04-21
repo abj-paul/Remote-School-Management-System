@@ -70,6 +70,7 @@ public class MultipleParser {
 	public ArrayList<Human> getCreatedObjects(){
 		return this.createdObjects;
 	}
+
 	public void printCreatedObjects() {
 		for(int i=0; i<this.createdObjects.size(); i++) this.createdObjects.get(i).printInfo();
 	}

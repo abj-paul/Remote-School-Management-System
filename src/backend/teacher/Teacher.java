@@ -34,5 +34,17 @@ public class Teacher extends Human {
 	public void assignMarkToStuden(Student student, Integer marks) {
 		student.addMarks(marks);
 	}
+	@Override
+	public int compareTo(Human secondHuman) {
+		// TODO Auto-generated method stub
+		return this.getAge()-secondHuman.getAge();
+	}
+	@Override
+	public String toString() {
+		String info = "";
+		info += super.toString();
+		info+="\n"+this.monthlySalary;
+		return info;
+	}
 	
 }

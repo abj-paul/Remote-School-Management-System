@@ -1,6 +1,6 @@
 package backend.generalClasses;
 
-public abstract class Human {
+public abstract class Human implements Comparable<Human>{
 	private String name;
 	private Address address;
 	private int age;

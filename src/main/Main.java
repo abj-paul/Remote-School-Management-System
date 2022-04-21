@@ -1,9 +1,13 @@
 package main;
 
+import java.util.ArrayList;
+
 import backend.exceptions.UnknownGenreException;
+import backend.generalClasses.Human;
 import backend.parser.MultipleParser;
 import backend.parser.Parser;
 import networking.Server;
+import threadedSort.Sort;
 
 public class Main {
 
@@ -14,7 +18,11 @@ public class Main {
 		MultipleParser multipleParser = new MultipleParser(str);
 		multipleParser.parse();
 		//parser.printForDebug();
-		multipleParser.printCreatedObjects();
+		//multipleParser.printCreatedObjects();
+		ArrayList<Human> humans= multipleParser.getCreatedObjects();
+		Sort<Human> sort = new Sort<Human>(humans);
+		sort.splitAndSort();
+		sort.print();
 	}
 
 }
