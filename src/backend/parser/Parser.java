@@ -43,6 +43,7 @@ public class Parser {
 	}
 	
 	public void creteObject() throws UnknownGenreException{
+		System.out.println("Creating Object.");
 		if(objectGenre.equals("Student")) {
 			Student student = new Student(this.parameterValueList);
 			student.printInfo();
@@ -59,7 +60,7 @@ public class Parser {
 		System.out.println("Reached here.");
 		Parser parser = new Parser(str);
 		parser.parse();
-		parser.printForDebug();
+		//parser.printForDebug();
 
 		try {
 			parser.creteObject();
