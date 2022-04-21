@@ -3,6 +3,6 @@ javac -d bin/ src/backend/institution/*.java src/backend/student/*.java src/back
 echo "Done compiling!"
 cd bin/
 java main.Main
-java networking.Client
+#java networking.Client
 echo "Exiting...!"
 cd ..
