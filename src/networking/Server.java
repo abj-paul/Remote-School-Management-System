@@ -19,7 +19,7 @@ public class Server {
     public void start(){
         try {
             this.serverSocket = new ServerSocket(this.port);
-            System.out.println("Server has started. Waiting for connection..");
+            System.out.println("\nServer has started. Waiting for connection..");
             this.socket = serverSocket.accept();
             this.dataInputStream = new DataInputStream(new BufferedInputStream(socket.getInputStream()));
             this.dataOutputStream = new DataOutputStream(socket.getOutputStream());
@@ -32,7 +32,7 @@ public class Server {
     public void receiveData(){
         String line = "";
         while(!line.equals("Over")){
-            System.out.println("Client:"+line);
+            System.out.println("Client: "+line);
             try {
                 totalString+=line;
                 line = this.dataInputStream.readUTF();

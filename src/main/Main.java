@@ -22,6 +22,7 @@ public class Main {
 		ArrayList<Human> humans= multipleParser.getCreatedObjects();
 		Sort<Human> sort = new Sort<Human>(humans);
 		sort.splitAndSort();
+		System.out.println("After sorting:");
 		sort.print();
 	}
 

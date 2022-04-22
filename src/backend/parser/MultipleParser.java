@@ -53,7 +53,7 @@ public class MultipleParser {
 	
 	public Human creteObject(String objectGenre, ArrayList<String>parameterValueList) throws UnknownGenreException{
 		Human human;
-		System.out.println("Creating Object.");
+		System.out.println("\nCreating Object.................");
 		if(objectGenre.equals("Student")) {
 			Student student = new Student(parameterValueList);
 			student.printInfo();
