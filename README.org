@@ -8,3 +8,6 @@
      cd bin/
      java networking.Client
   #+end_src
+* Infourmation Sources
+  [[https://stackoverflow.com/questions/2659593/what-is-the-use-of-interface-constants][Should constants be used inside interfaces?]]
+  [[https://stackoverflow.com/questions/161633/should-methods-in-a-java-interface-be-declared-with-or-without-a-public-access-m][Should interfaces have public access modifiers?]]

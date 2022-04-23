@@ -30,10 +30,7 @@ public class Teacher extends Human {
 	public void setMonthlySalary(double monthlySalary) {
 		this.monthlySalary = monthlySalary;
 	}
-	
-	public void assignMarkToStuden(Student student, Integer marks) {
-		student.addMarks(marks);
-	}
+
 	@Override
 	public int compareTo(Human secondHuman) {
 		// TODO Auto-generated method stub
