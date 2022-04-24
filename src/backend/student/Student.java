@@ -25,6 +25,7 @@ public class Student extends Human implements IStudent{
 
 	
 	public void printInfo() {
+		System.out.println("Role: Student");
 		System.out.println(super.toString());
 		System.out.println("Id:"+this.id);
 		//this.printResult();

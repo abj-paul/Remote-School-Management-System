@@ -19,6 +19,7 @@ public class Teacher extends Human implements ITeacher {
 	}
 	
 	public void printInfo() {
+		System.out.println("Role: Teacher");
 		System.out.println(super.toString());
 		System.out.println("Montly Salary:"+this.monthlySalary);
 	}

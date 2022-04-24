@@ -32,6 +32,7 @@ public class GuiController {
 			System.out.println(new File(".").getAbsolutePath());
 			FileWriter myWriter = new FileWriter("networking/input.txt");
      		myWriter.write(parameterListTextArea.getText());
+     		myWriter.write("\nOver");
       		myWriter.close();
       		System.out.println("Successfully wrote to the file.");
     		} catch (IOException e) {e.printStackTrace();}
