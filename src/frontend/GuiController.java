@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
+import java.io.File;
 import java.io.FileWriter;  
 import java.io.IOException;
 import java.io.InputStream;
@@ -28,7 +29,8 @@ public class GuiController {
 		//System.out.println(parameterListTextArea.getText());
 		try {
       		//FileWriter myWriter = new FileWriter("input.txt");
-			FileWriter myWriter = new FileWriter("/networking/input.txt"v);
+			System.out.println(new File(".").getAbsolutePath());
+			FileWriter myWriter = new FileWriter("networking/input.txt");
      		myWriter.write(parameterListTextArea.getText());
       		myWriter.close();
       		System.out.println("Successfully wrote to the file.");

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import backend.student.Student;
 
-public abstract class Result {
+public abstract class Result implements IResult {
 	protected ArrayList<Integer>marks;
 	
 	public void addMarks(int mark) {

@@ -27,7 +27,7 @@ public class Address implements IAddress{
 	}
 
 	public void sendLetter() {
-		System.out.println("Letter has been sent!");
+		System.out.println("Letter has been sent!.......");
 	}
 	
 	public static Address getDefaultAddress() {

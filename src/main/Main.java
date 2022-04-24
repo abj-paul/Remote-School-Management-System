@@ -3,6 +3,7 @@ package main;
 import java.util.ArrayList;
 
 import backend.exceptions.UnknownGenreException;
+import backend.generalClasses.Address;
 import backend.generalClasses.Human;
 import backend.generalClasses.IHuman;
 import backend.institution.Institute;
@@ -54,6 +55,9 @@ public class Main {
 		
 		institute.admitStudent(new Student("Robin karp","1201", 20));
 		institute.printStudentInfo();
+		
+		Address address = new Address();
+		address.sendLetter();
 		
 		Sort<Human> sort = new Sort<Human>(humans);
 		sort.splitAndSort();
