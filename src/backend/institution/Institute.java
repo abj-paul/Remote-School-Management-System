@@ -13,10 +13,10 @@ public abstract class Institute implements IInstitute{
 	private Address instituteAddress; // City, Street, Area
 	private int totalStudent;
 	
-	private ArrayList<ITeacher> teachers;
-	private ArrayList<IStudent> students;
+	private ArrayList<Teacher> teachers;
+	private ArrayList<Student> students;
 	
-		protected Institute(String instituteName, ArrayList<ITeacher>teachers, ArrayList<IStudent>students) {
+	protected Institute(String instituteName, ArrayList<Teacher>teachers, ArrayList<Student>students) {
 		this.instituteName = instituteName;
 		this.instituteAddress = new Address();
 		this.teachers = teachers;
@@ -25,11 +25,11 @@ public abstract class Institute implements IInstitute{
 	}
 	
 	// Tasks
-	public void admitStudent(IStudent newStudent) {
+	public void admitStudent(Student newStudent) {
 		this.students.add(newStudent);
 
 	}
-	public void registerTeacher(ITeacher newTeacher) {
+	public void registerTeacher(Teacher newTeacher) {
 		this.teachers.add(newTeacher);
 
 	}
@@ -51,10 +51,10 @@ public abstract class Institute implements IInstitute{
 	protected void setTotalStudent(int totalStudent) {
 		this.totalStudent = totalStudent;
 	}
-	public ArrayList<ITeacher> getTeachers() {
+	public ArrayList<Teacher> getTeachers() {
 		return teachers;
 	}
-	protected void setTeachers(ArrayList<ITeacher> teachers) {
+	protected void setTeachers(ArrayList<Teacher> teachers) {
 		this.teachers = teachers;
 	}
 

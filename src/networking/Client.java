@@ -24,7 +24,7 @@ public class Client implements IClient {
 
             this.dataInputStream = new DataInputStream(new BufferedInputStream(this.socket.getInputStream()));
             this.dataOutputStream = new DataOutputStream(this.socket.getOutputStream());
-            this.fileInputStream = getClass().getResourceAsStream("/networking/input.txt");
+            this.fileInputStream = getClass().getResourceAsStream(IClient.filename);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

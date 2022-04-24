@@ -1,6 +1,6 @@
 package backend.generalClasses;
 
-public abstract class Human implements Comparable<Human>, IHuman{
+public abstract class Human implements IHuman{
 	protected String name;
 	protected Address address;
 	protected int age;
@@ -36,6 +36,12 @@ public abstract class Human implements Comparable<Human>, IHuman{
 	public String toString() {
 		String info = "Name:" + this.name + "\nAddress:"+this.address.toString()+"\nAge:"+this.age+"\nFavourite Color:"+this.favouriteColor;
 		return info;
+	}
+	
+	@Override
+	public int compareTo(Human secondHuman) {
+		// TODO Auto-generated method stub
+		return this.getAge()-secondHuman.getAge();
 	}
 	
 	// Getter Setter
