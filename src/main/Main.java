@@ -32,14 +32,14 @@ public class Main {
 		MultipleParser multipleParser = new MultipleParser(str);
 		multipleParser.parse();
 		ArrayList<Human> humans= multipleParser.getCreatedObjects();
-		ArrayList<Teacher> teachers = new ArrayList<Teacher>();
-		teachers.add((Teacher)humans.get(0));
-		teachers.add((Teacher)humans.get(1));
+		ArrayList<ITeacher> teachers = new ArrayList<ITeacher>();
+		teachers.add((ITeacher)humans.get(0));
+		teachers.add((ITeacher)humans.get(1));
 		
-		ArrayList<Student> students = new ArrayList<Student>();
-		students.add((Student)humans.get(2));
-		students.add((Student)humans.get(3));
-		students.add((Student)humans.get(4));
+		ArrayList<IStudent> students = new ArrayList<IStudent>();
+		students.add((IStudent)humans.get(2));
+		students.add((IStudent)humans.get(3));
+		students.add((IStudent)humans.get(4));
 		
 		System.out.println("University Module has been loaded........");
 		Teacher headmaster = new Teacher("Ravi Gopal",43,200120.2,"Green");

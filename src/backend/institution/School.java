@@ -10,7 +10,7 @@ import backend.teacher.Teacher;
 public class School extends Institute {
 	private Teacher headMaster;
 	
-	public School(String instituteName, ArrayList<Teacher> teachers, ArrayList<Student> students, Teacher headMaster) {
+	public School(String instituteName, ArrayList<ITeacher> teachers, ArrayList<IStudent> students, Teacher headMaster) {
 		super(instituteName, teachers, students);
 		this.headMaster = headMaster;
 	}
