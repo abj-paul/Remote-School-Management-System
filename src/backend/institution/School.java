@@ -27,23 +27,23 @@ public class School extends Institute {
 
 	@Override
 	public void expelStudent() {
-		System.out.println("Headmaster "+ this.headMaster.getName() +" has expelled student.");
+		System.out.println("Headmaster "+ this.headMaster.getName() +" has expelled student................");
 	}
 
 	@Override
 	public void giveScholarship() {
-		System.out.println("Headmaster "+ this.headMaster.getName() +"  has given scholarship to a student.");
+		System.out.println("Headmaster "+ this.headMaster.getName() +"  has given scholarship to a student...................");
 	}
 
 	@Override
 	public void admitStudent(IStudent newStudent) {
-		// TODO Auto-generated method stub
-		
+		this.admitStudent(newStudent);
 	}
 
 	@Override
 	public void registerTeacher(ITeacher newTeacher) {
 		// TODO Auto-generated method stub
+		this.registerTeacher(newTeacher);
 		
 	}
 

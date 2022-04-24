@@ -34,9 +34,11 @@ public abstract class Institute implements IInstitute{
 
 	}
 	public void printTeachersInfo() {
+		System.out.println("Printing student information.........................");
 		for(int i=0; i<teachers.size(); i++) this.teachers.get(i).printInfo();
 	} 
 	public void printStudentInfo() {
+		System.out.println("Printing teacher's information.........................");
 		for(int i=0; i<students.size(); i++) this.students.get(i).printInfo();
 	}
 	

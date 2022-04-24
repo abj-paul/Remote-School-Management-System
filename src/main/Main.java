@@ -40,6 +40,7 @@ public class Main {
 		students.add((Student)humans.get(3));
 		students.add((Student)humans.get(4));
 		
+		System.out.println("University Module has been loaded........");
 		Teacher headmaster = new Teacher("Ravi Gopal",43,200120.2,"Green");
 		headmaster.talk();
 		
@@ -56,7 +57,7 @@ public class Main {
 		
 		Sort<Human> sort = new Sort<Human>(humans);
 		sort.splitAndSort();
-		System.out.println("After sorting:");
+		System.out.println("After sorting:...........................");
 		sort.print();
 	}
 	
