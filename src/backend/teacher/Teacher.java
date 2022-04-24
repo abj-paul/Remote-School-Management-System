@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import backend.generalClasses.Human;
 import backend.student.Student;
 
-public class Teacher extends Human {
+public class Teacher extends Human implements ITeacher {
 	private double monthlySalary;
 	
 	public Teacher(String teacherName, int age, Double monthlySalary, String favourtiteColor) {
@@ -23,6 +23,10 @@ public class Teacher extends Human {
 		System.out.println("Montly Salary:"+this.monthlySalary);
 	}
 	
+	public void talk() {
+		System.out.println("Teacher is talking...");
+	}
+	
 	// Getter Setters
 	public double getMonthlySalary() {
 		return monthlySalary;
@@ -33,7 +37,6 @@ public class Teacher extends Human {
 
 	@Override
 	public int compareTo(Human secondHuman) {
-		// TODO Auto-generated method stub
 		return this.getAge()-secondHuman.getAge();
 	}
 	@Override
@@ -42,6 +45,12 @@ public class Teacher extends Human {
 		info += super.toString();
 		info+="\n"+this.monthlySalary;
 		return info;
+	}
+
+	@Override
+	public void peformTeaching() {
+		System.out.println("Teacher "+name+" has performed teaching for 1 hour.");
+
 	}
 	
 }

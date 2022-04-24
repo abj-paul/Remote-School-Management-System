@@ -1,20 +1,37 @@
 package backend.generalClasses;
 
-public class Address {
+public class Address implements IAddress{
 	private String district;
 	private String postoffice;
 	private String village;
 	private String houseNumber;
 	
 	public Address(String district, String postoffice, String village, String houseNumber) {
-		this.district = district;
-		this.postoffice = postoffice;
+		this(district, postoffice);
 		this.village = village;
 		this.houseNumber = houseNumber;
 	}
 	
-	static Address getDefaultAddress() {
-		Address address = new Address(DefaultValues.DISTRICT, DefaultValues.POSTOFFICE, DefaultValues.VILLAGE, DefaultValues.HOUSENUMBER);
+	public Address() {
+		this.district = IAddress.DISTRICT;
+		this.postoffice = IAddress.POSTOFFICE;
+		this.village = IAddress.VILLAGE;
+		this.houseNumber = IAddress.HOUSENUMBER;
+	}
+	
+	public Address(String district, String postoffice) {
+		this.district = district;
+		this.postoffice = postoffice;
+		this.village = IAddress.VILLAGE;
+		this.houseNumber = IAddress.HOUSENUMBER;
+	}
+
+	public void sendLetter() {
+		System.out.println("Letter has been sent!");
+	}
+	
+	public static Address getDefaultAddress() {
+		Address address = new Address();
 		return address;
 	}
 	

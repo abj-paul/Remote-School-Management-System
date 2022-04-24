@@ -4,19 +4,19 @@ import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class Server {
+public class Server implements IServer{
     private ServerSocket serverSocket;
     private DataInputStream dataInputStream;
     private DataOutputStream dataOutputStream;
     private Socket socket;
+    
     private String totalString="";
-
     private int port;
 
     public Server(int port){
         this.port = port;
     }
-    public void start(){
+    public void startConnection(){
         try {
             this.serverSocket = new ServerSocket(this.port);
             System.out.println("\nServer has started. Waiting for connection..");
@@ -66,8 +66,8 @@ public class Server {
         System.out.println(server.getTotalString());
     }*/
     public static String startServerAndGetString() {
-    	Server server = new Server(20234);
-        server.start();
+    	Server server = new Server(IServer.DEFAULT_PORT);
+        server.startConnection();
         server.receiveData();
         server.closeConnection();
         

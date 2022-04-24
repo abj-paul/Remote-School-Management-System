@@ -17,7 +17,6 @@ public class Main {
 
 		MultipleParser multipleParser = new MultipleParser(str);
 		multipleParser.parse();
-		//parser.printForDebug();
 		//multipleParser.printCreatedObjects();
 		ArrayList<Human> humans= multipleParser.getCreatedObjects();
 		Sort<Human> sort = new Sort<Human>(humans);

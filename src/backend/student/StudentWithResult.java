@@ -1,8 +1,6 @@
 package backend.student;
 
 import java.util.ArrayList;
-
-import backend.generalClasses.DefaultValues;
 import backend.result.Result;
 
 public class StudentWithResult extends Result{

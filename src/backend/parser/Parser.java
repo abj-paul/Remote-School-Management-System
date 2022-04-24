@@ -9,7 +9,7 @@ import backend.generalClasses.Human;
 import backend.student.Student;
 import backend.teacher.Teacher;
 
-public abstract class Parser {
+public abstract class Parser implements IParser{
 	protected String rawData;
 	protected ArrayList<Human> createdObjects;
 	

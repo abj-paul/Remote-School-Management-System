@@ -2,112 +2,62 @@ package backend.institution;
 
 import java.util.ArrayList;
 
-import backend.result.Result;
+import backend.generalClasses.Address;
+import backend.student.IStudent;
 import backend.student.Student;
+import backend.teacher.ITeacher;
 import backend.teacher.Teacher;
 
-public abstract class Institute{
+public abstract class Institute implements IInstitute{
 	private String instituteName;
-	private String instituteLocation; // City, Street, Area
+	private Address instituteAddress; // City, Street, Area
 	private int totalStudent;
-	private ArrayList<Double> tutitionFeePerClass;
-	private ArrayList<Integer> studentCapacityPerClass;
 	
-	private ArrayList<Teacher> teachers;
-	private ArrayList<ArrayList<Student>> studentsPerClass;
+	private ArrayList<ITeacher> teachers;
+	private ArrayList<IStudent> students;
 	
-	private Teacher headMaster;
-	private Result result;
-	
-	// Construtors
-	public Institute(String instituteName, String instituteLocation, int totalStudent, ArrayList<Double> tutitionFeePerClass, ArrayList<Integer> studentCapacityPerClass, ArrayList<Teacher> teachers, ArrayList<ArrayList<Student>> studentsPerClass, Teacher headMaster) {
+		protected Institute(String instituteName, ArrayList<ITeacher>teachers, ArrayList<IStudent>students) {
 		this.instituteName = instituteName;
-		this.instituteLocation = instituteLocation;
-		this.totalStudent = totalStudent;
-		this.tutitionFeePerClass = tutitionFeePerClass;
-		this.studentCapacityPerClass = studentCapacityPerClass;
+		this.instituteAddress = new Address();
 		this.teachers = teachers;
-		this.studentsPerClass = studentsPerClass;
-		this.headMaster = headMaster;
-		//this.result = new Result();
-		
+		this.students = students;
+		this.totalStudent = students.size();
 	}
 	
 	// Tasks
-	public void admitStudent() {
-		// TODO Auto-generated method stub
+	public void admitStudent(IStudent newStudent) {
+		this.students.add(newStudent);
 
 	}
-	public void registerTeacher() {
-		// TODO Auto-generated method stub
+	public void registerTeacher(ITeacher newTeacher) {
+		this.teachers.add(newTeacher);
 
 	}
-	abstract void printResult();
 	public void printTeachersInfo() {
-		
+		for(int i=0; i<teachers.size(); i++) this.teachers.get(i).printInfo();
 	} 
 	public void printStudentInfo() {
-		
+		for(int i=0; i<students.size(); i++) this.students.get(i).printInfo();
 	}
 	
-	abstract void decorateInstitute();
-	public void cleanInstitute() {
-		
-	}
-	public void paintInstitute() {
-		
-	}
-	public void expelStudent() {
-		
-	}
-	abstract void giveScholarship();
 	public void buyArchitecture(String stuffToBuy) {
-		
+		System.out.println("Buying "+stuffToBuy+ "for the university.");
 	}
 	
 	// Getters And Setters
-	public String getInstituteLocation() {
-		return instituteLocation;
-	}
-	protected void setInstituteLocation(String instituteLocation) {
-		this.instituteLocation = instituteLocation;
-	}
 	public int getTotalStudent() {
 		return totalStudent;
 	}
 	protected void setTotalStudent(int totalStudent) {
 		this.totalStudent = totalStudent;
 	}
-	public ArrayList<Double> getTutitionFeePerClass() {
-		return tutitionFeePerClass;
-	}
-	protected void setTutitionFeePerClass(ArrayList<Double> tutitionFeePerClass) {
-		this.tutitionFeePerClass = tutitionFeePerClass;
-	}
-	public ArrayList<Integer> getStudentCapacityPerClass() {
-		return studentCapacityPerClass;
-	}
-	protected void setStudentCapacityPerClass(ArrayList<Integer> studentCapacityPerClass) {
-		this.studentCapacityPerClass = studentCapacityPerClass;
-	}
-	public ArrayList<Teacher> getTeachers() {
+	public ArrayList<ITeacher> getTeachers() {
 		return teachers;
 	}
-	protected void setTeachers(ArrayList<Teacher> teachers) {
+	protected void setTeachers(ArrayList<ITeacher> teachers) {
 		this.teachers = teachers;
 	}
-	public ArrayList<ArrayList<Student>> getStudentsPerClass() {
-		return studentsPerClass;
-	}
-	protected void setStudentsPerClass(ArrayList<ArrayList<Student>> studentsPerClass) {
-		this.studentsPerClass = studentsPerClass;
-	}
-	public Teacher getHeadMaster() {
-		return headMaster;
-	}
-	protected void setHeadMaster(Teacher headMaster) {
-		this.headMaster = headMaster;
-	}
+
 	public String getInstituteName() {
 		return instituteName;
 	}

@@ -4,8 +4,7 @@ import java.io.*;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class Client {
-    private String filename = "input.txt";
+public class Client implements IClient {
     private Socket socket;
     private DataOutputStream dataOutputStream;
     private DataInputStream dataInputStream;
@@ -59,7 +58,7 @@ public class Client {
     }
 
     public static void main(String[] args) {
-        Client client = new Client("127.0.0.1",20234);
+        Client client = new Client("127.0.0.1",IClient.DEFAULT_PORT);
         client.startConnection();
         client.sendData();
         client.closeConnection();

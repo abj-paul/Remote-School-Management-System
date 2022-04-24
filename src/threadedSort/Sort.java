@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-public class Sort<T extends Comparable>{
+public class Sort<T extends Comparable> implements ISort{
 	private ArrayList<T> elementStorage;
 	
 	public Sort(ArrayList<T> elementStorage){

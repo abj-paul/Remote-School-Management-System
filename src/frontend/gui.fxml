@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="submitButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GuiController">
+   <children>
+      <TextField fx:id="parameterListTextArea" layoutX="92.0" layoutY="290.0" prefHeight="25.0" prefWidth="448.0" promptText="Enter Parameter List" />
+      <Label fx:id="headerLabel" layoutX="179.0" layoutY="38.0" text="Remote School Management System" />
+      <ImageView fx:id="backgroundImage" fitHeight="213.0" fitWidth="547.0" layoutX="144.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../eclipse-workspace/PracticeArea/src/frontend/background.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="mySubmitButton" layoutX="206.0" layoutY="338.0" mnemonicParsing="false" onAction="#submitData" prefHeight="25.0" prefWidth="176.0" text="Submit" />
+   </children>
+</AnchorPane>

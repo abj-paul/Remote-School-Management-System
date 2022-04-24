@@ -1,12 +1,10 @@
 package backend.student;
 
 import java.util.ArrayList;
-
-import backend.generalClasses.DefaultValues;
 import backend.generalClasses.Human;
 import backend.result.Result;
 
-public class Student extends Human{
+public class Student extends Human implements IStudent{
 	private String id;
 	
 	public Student(String name, String id, int age){
@@ -17,7 +15,7 @@ public class Student extends Human{
 	
 	public Student() {
 		super();
-		this.id = DefaultValues.ID;
+		this.id = IStudent.ID;
 		//this.marks = new ArrayList<Integer>();
 	}
 	
@@ -30,6 +28,10 @@ public class Student extends Human{
 		System.out.println(super.toString());
 		System.out.println("Id:"+this.id);
 		//this.printResult();
+	}
+	
+	public void talk() {
+		System.out.println("I am a student!");
 	}
 
 	@Override
@@ -44,5 +46,10 @@ public class Student extends Human{
 		info += super.toString();
 		info +="\n"+this.id+"\n";
 		return info;
+	}
+
+	@Override
+	public void performStuty() {
+		System.out.println("Student "+this.name+" studied fir 2 hours.");
 	}
 }

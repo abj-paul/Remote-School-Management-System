@@ -1,10 +1,10 @@
 package backend.generalClasses;
 
 public abstract class Human implements Comparable<Human>, IHuman{
-	private String name;
-	private Address address;
-	private int age;
-	private String favouriteColor;
+	protected String name;
+	protected Address address;
+	protected int age;
+	protected String favouriteColor;
 	
 	
 	public Human(){
